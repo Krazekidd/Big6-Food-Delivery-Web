@@ -1,0 +1,14 @@
+.navbar{
+    background:rgb(150, 6, 6);
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: 15px;
+    padding-left: 15px;
+
+.navdiv{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+}
