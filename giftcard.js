@@ -40,8 +40,33 @@ function showForm() {
               <label for="Wedding">Wedding</label>
           </div>
           <div>
-              <input type="checkbox" id="holidays" name="specialOccasion" value="holidays">
-              <label for="holidays">Holidays</label>
+              <input type="checkbox" id="Anniversary" name="specialOccasion" value="Anniversary">
+              <label for="Anniversary">Anniversary</label>
+          </div>
+          <div>
+              <input type="checkbox" id="Graduation" name="specialOccasion" value="Graduation">
+              <label for="Wedding">Graduation</label>
+          </div>
+          <div>
+              <input type="checkbox" id="Bridal" name="specialOccasion" value="Bridal">
+              <label for="Bridal">Bridal Shower</label>
+          </div>
+
+          <div>
+              <input type="checkbox" id="Christmas" name="specialOccasion" value="Christmas">
+              <label for="Christmas">Christmas</label>
+          </div>
+          <div>
+              <input type="checkbox" id="Mother" name="specialOccasion" value="Mother">
+              <label for="Mother">Mother's Day</label>
+          </div>
+          <div>
+              <input type="checkbox" id="Father" name="specialOccasion" value="Father">
+              <label for="Father">Father's Day</label>
+          </div>
+          <div>
+              <input type="checkbox" id="new" name="specialOccasion" value="new">
+              <label for="new">New Year</label>
           </div>
 
           <label for="other">Other:</label>
@@ -55,6 +80,10 @@ function showForm() {
           <div>
               <input type="checkbox" id="cursive" name="specialOccasion" value="cursive">
               <label for="cursive">Cursive</label>
+          </div>
+          <div>
+              <input type="checkbox" id="cursive" name="specialOccasion" value="cursive">
+              <label for="cursive">Times New Roman</label>
           </div>
 
           <label for="other">Other:</label>
