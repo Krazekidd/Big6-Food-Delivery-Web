@@ -1,4 +1,20 @@
 
+
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+
+
+const supabase_url = 'https://todxjbqzlxjjdiccyzuu.supabase.co';
+const anon_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvZHhqYnF6bHhqamRpY2N5enV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA1NDgwMzUsImV4cCI6MjAxNjEyNDAzNX0.PyducfY0_Qo3vvOZHJ7CMllHMbymQZs-Sg61A3ZkgHc";
+
+
+const supabase = createClient(supabase_url, anon_key);
+
+
+
+
+
+
 let cartIcon = document.querySelector('#cart-icon')
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('#close-cart')
@@ -125,35 +141,65 @@ function updatetotal(){
 
 
 function storeCartItemsToCSV() {
-    const csvContent = "data:text/csv;charset=utf-8," +
-        "Title,Price,Quantity,Total\n" +
-        cartItemsList.map(item => `${item.title},${item.price},${item.quantity},${amount}`).join("\n");
 
-    const blob = new Blob([csvContent], { type: "text/csv" });
-    const formData = new FormData();
-    formData.append('cartData', blob, 'cart_items.csv');
-    fetch('https://example.com/upload', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+    async function inserter(items){
+        console.log("dddddddddddddddddddddddd");
+
+        const { data, error } = await supabase.auth.getSession()
+
+        console.log(data["session"]["user"]["id"]);
+
+        let userid = data["session"]["user"]["id"];
+
+        try {
+            const { data, error } = await supabase
+              .from('current_orders')
+              .insert([
+                //{ , cost: items.price, , user_id: userid},
+                {user_id: userid, cost: items.price, item: items.title,}
+              ])
+              .select()
+          
+            } catch (error) {
+              
         }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Server response:', data);
-    })
-    .catch(error => {
-        console.error('Error during fetch operation:', error);
-    });
-
-    var cartContent = document.getElementsByClassName("cart-content")[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
     }
-    updatetotal();
+ 
+    console.log(cartItemsList);
+
+    const csvContent =  cartItemsList.map(item => `${item.title},${item.price},${amount},${item.quantity},${inserter(item)}`).join("\n");
+
+
+        
+
+
+
+
+    // const blob = new Blob([csvContent], { type: "text/csv" });
+    // const formData = new FormData();
+    // formData.append('cartData', blob, 'cart_items.csv');
+    // fetch('https://example.com/upload', {
+    //     method: 'POST',
+    //     body: formData
+    // })
+    // .then(response => {
+    //     if (!response.ok) {
+    //         throw new Error('Network response was not ok');
+    //     }
+    //     return response.json();
+    // })
+    // .then(data => {
+    //     console.log('Server response:', data);
+    // })
+    // .catch(error => {
+    //     console.error('Error during fetch operation:', error);
+    // });
+
+    // var cartContent = document.getElementsByClassName("cart-content")[0];
+    // while (cartContent.hasChildNodes()) {
+    //     cartContent.removeChild(cartContent.firstChild);
+    // }
+    // updatetotal();
 /*
     const link = document.createElement("a");
     link.href = window.URL.createObjectURL(blob);
