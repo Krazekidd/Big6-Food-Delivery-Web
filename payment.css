@@ -1,11 +1,16 @@
 .btn-outline-warning {
-    background-color: #6c757d; /* Set the background color for grey */
-    color: #007bff; /* Set the text color for blue */
-    border-color: #6c757d; /* Set the border color for grey */
+  background-color: #6c757d;
+  color: #007bff;
+  border-color: #6c757d;
 }
 
 .btn-outline-warning:hover {
-    background-color: #007bff; /* Set the background color for blue on hover */
-    color: #fff; /* Set the text color for white on hover */
-    border-color: #007bff; /* Set the border color for blue on hover */
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.blue-card {
+  background-color: #007bff;
+  color: #fff;
 }
