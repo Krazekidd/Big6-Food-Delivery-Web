@@ -60,8 +60,8 @@ function ready(){
 function buybuttonClicked(){
     alert("Your Order has been Placed")
     storeCartItemsToCSV();
-    window.location.href = "checkout.html";
     var cartContent = document.getElementsByClassName("cart-content")[0];
+    window.location.href = "checkout.html";
     while (cartContent.hasChildNodes()){
         cartContent.removeChild(cartContent.firstChild);
     }
