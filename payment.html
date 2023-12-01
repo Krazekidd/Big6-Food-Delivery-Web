@@ -1,185 +1,180 @@
-<!DOCTYPE html>
-<html>
-<head>
+html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="payment.css">
 
-  <title>Example 04 - Read Value | CardJs</title>
+    <title>Payment Process</title>
+  </head>
+  <main>
+  <body>
 
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-  <link href="/CardJs-master/card-js.min.css" rel="stylesheet" type="text/css" />
-  <script src="/CardJs-master/card-js.min.js"></script>
-
-  <style>
-    body {
-      font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    }
-    .panel {
-      background-color: #F5F5F7;
-      border: 1px solid #ddd;
-      padding: 20px;
-      display: block;
-      width: 270px;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,.1);
-    }
-    .btn-wrapper {
-      width: 310px;
-      text-align: center;
-    }
-    button {
-      background: rgb(68,175,231); /* Old browsers */
-      background: -moz-linear-gradient(top, rgba(68,175,231,1) 0%, rgba(49,152,223,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(68,175,231,1) 0%,rgba(49,152,223,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(68,175,231,1) 0%,rgba(49,152,223,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44afe7', endColorstr='#3198df',GradientType=0 );
-      color: #fff;
-      padding: 2px 10px;
-      border: 1px solid rgba(46, 86, 153, 0.0980392);
-      border-bottom-color: rgba(46, 86, 153, 0.4);
-      border-top: 0;
-      border-radius: 4px;
-      font-size: 14px;
-      text-shadow: rgba(46, 86, 153, 0.298039) 0px -1px 0px;
-      line-height: 34px;
-      -webkit-font-smoothing: antialiased;
-      margin-top: 20px;
-    }
-    button:hover {
-      cursor: pointer;
-    }
-  </style>
-
-</head>
-<body>
-
-  <table>
-    <tr>
-      <td>
-
-        <div class="panel">
-          <div id="my-card-1" class="card-js" data-capture-name="true"></div>
+<div class="container mb-5 mt-5">
+    <div class="row mt-4">
+        <div class="h4 col-12">Payment</div>
+        <div class="col-12">
+            All transactions are secure and encrypted.
         </div>
-
-        <div style="margin-top: 40px">
-          <table style="width: 310px">
-            <tr>
-              <td><label for="card-number-1">Card Number:</label></td>
-              <td><input type="text" id="card-number-1" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="card-type-1">Card Type:</label></td>
-              <td><input type="text" id="card-type-1" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="name-1">Name on Card:</label></td>
-              <td><input type="text" id="name-1" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="expiry-month-1">Expiry Month:</label></td>
-              <td><input type="text" id="expiry-month-1" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="expiry-year-1">Expiry Year:</label></td>
-              <td><input type="text" id="expiry-year-1" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="cvc-1">CVC:</label></td>
-              <td><input type="text" id="cvc-1" readonly /></td>
-            </tr>
-          </table>
+    </div>
+    
+    <div class="accordion mt-4" id="paymentMethods">
+        <div class="card">
+            <div class="card-header" id="creditDebit">
+                <h6 class="mb-0 ml-4">
+                    <input class="form-check-input" type="radio" name="rbPayments" id="rbCreditAndDebit" data-toggle="collapse" data-target="#collapseCreditDebitInfo" aria-expanded="true" aria-controls="collapseCreditDebitInfo" checked>
+                    <label class="form-check-label" for="rbCreditAndDebit">
+                        Credit & Debit Cards
+                    </label>
+                </h6>
+            </div>
+    
+            <div id="collapseCreditDebitInfo" class="collapse show" aria-labelledby="creditDebit" data-parent="#paymentMethods">
+                <div class="card-body">
+                    Credit and debit card info if any.
+                </div>
+            </div>
         </div>
-
-        <div class="btn-wrapper">
-          <button id="read-btn-1">Read Values</button>
+        <div class="card">
+            <div class="card-header" id="paypal">
+                <h6 class="mb-0 ml-4">
+                    <input class="form-check-input" type="radio" name="rbPayments" id="rbPayPal" data-toggle="collapse" data-target="#collapsePayPalInfo" aria-expanded="false" aria-controls="collapsePayPalInfo">
+                    <label class="form-check-label" for="rbPayPal">
+                        PayPal
+                    </label>
+                </h6>
+            </div>
+            <div id="collapsePayPalInfo" class="collapse" aria-labelledby="paypal" data-parent="#paymentMethods">
+                <div class="card-body">
+                    PayPal Info
+                </div>
+            </div>
         </div>
-
-      </td>
-      <td>
-
-        <!-- <div class="panel">
-          <div id="my-card-2" class="card-js" data-capture-name="true"></div>
+        <div class="card">
+            <div class="card-header" id="applePay">
+                <h6 class="mb-0 ml-4">
+                    <input class="form-check-input" type="radio" name="rbPayments" id="rbApplePay" data-toggle="collapse" data-target="#collapseApplePayInfo" aria-expanded="false" aria-controls="collapseApplePayInfo">
+                    <label class="form-check-label" for="rbApplePay">
+                        Apple Pay
+                    </label>
+                </h6>
+            </div>
+            <div id="collapseApplePayInfo" class="collapse" aria-labelledby="applePay" data-parent="#paymentMethods">
+                <div class="card-body">
+                    Apple Pay info
+                </div>
+            </div>
         </div>
-
-        <div style="margin-top: 40px">
-          <table style="width: 310px">
-            <tr>
-              <td><label for="card-number-2">Card Number:</label></td>
-              <td><input type="text" id="card-number-2" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="card-type-2">Card Type:</label></td>
-              <td><input type="text" id="card-type-2" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="name-2">Name on Card:</label></td>
-              <td><input type="text" id="name-2" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="expiry-month-2">Expiry Month:</label></td>
-              <td><input type="text" id="expiry-month-2" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="expiry-year-2">Expiry Year:</label></td>
-              <td><input type="text" id="expiry-year-2" readonly /></td>
-            </tr>
-            <tr>
-              <td><label for="cvc-2">CVC:</label></td>
-              <td><input type="text" id="cvc-2" readonly /></td>
-            </tr>
-          </table>
+        <div class="card">
+            <div class="card-header" id="googlePay">
+                <h6 class="mb-0 ml-4">
+                    <input class="form-check-input" type="radio" name="rbPayments" id="rbGooglePay" data-toggle="collapse" data-target="#collapseGooglePayInfo" aria-expanded="false" aria-controls="collapseGooglePayInfo">
+                    <label class="form-check-label" for="rbGooglePay">
+                        Google Pay
+                    </label>
+                </h6>
+            </div>
+            <div id="collapseGooglePayInfo" class="collapse" aria-labelledby="googlePay" data-parent="#paymentMethods">
+                <div class="card-body">
+                    Google Pay info
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="btn-wrapper">
-          <button id="read-btn-2">Read Values</button>
+    <div class="row text-center">
+        <div class="col-md-12 col-lg-12">
+            <div class="row text-muted">
+                <div class="h2 col-12">Payment</div>
+                <div class="col-lg-12 col-md-12 dashhead-subtitle h6 text-capitalize text-muted">
+                    <span id="viewCart" >Cart</span> &#187; <span id="viewInformation">Information</span> &#187; <span id="viewShipping">Shipping</span> &#187; <span id="payment" > <span id="enterpayment" class="text-warning">Enter Payment Card Info</span> &#187; <span id="confirm" >Confirm</span> </span>
+                </div>
+            </div>
         </div>
+    </div>
+    <div id="pnlCreditCardSection" class="mt-5">
+        <div class="mx-auto">
+            <div class="row justify-content-center">
+                <div class="col-9 my-4 py-1">
+                    <h2 class="text-center">Credit &amp; Debit Cards Information</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7 mt-3 mt-lg-0 text-center mx-auto">
 
-      </td> 
-    </tr>-->
-  </table>
+                    <!--Hosted Field for CC number-->
+                    <div class="row mb-4">
+                        <div class="col-lg-1 col-md-1"></div>
+                        <div class="col-lg-3 col-md-3 col-12 text-left">
+                            <span class="text-muted recorddetaillabel mr-1">Card Number *</span>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 text-lg-right text-md-right text-right text-sm-left">
+                            <div class="row">
+                                <div class="col-12 pr-1">
+                                    <div class="input-group">
+                                        <div class="w-100" aria-label="Card Number" aria-describedby="card-number-logo">
+                                            <input type="number" class="center-block form-control" id="card-number" required/>
+                                        </div>
+                                        <div id="card-logo" class="pt-2 mx-2 input-group-append">
+                                            <img alt="card image" src="https://files.readme.io/9018c4f-Visa.png" height="20px" id="card-number-logo">
+                                        </div>
+                                    </div>
+                                    <span class="helper-text text-left" id="ccn-help"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!--Hosted Field for CC EXP-->
+                    <div class="row mb-4">
+                        <div class="col-lg-1 col-md-1"></div>
+                        <div class="col-lg-3 col-md-3 col-12 text-left">
+                            <span class="text-muted recorddetaillabel mr-1">Exp. Date *</span>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 text-lg-right text-md-right text-right text-sm-left">
+                            <div class="row">
+                                <div class="col-12 pr-1">
+                                    <div class="input-group">
+                                        <div class="mr-2" data-bluesnap="exp">
+                                            <input type="date" value="2022-01-01" min="2000-01-01" class="center-block form-control" id="exp-date"/>
+                                        </div>
+                                    </div>
+                                    <span class="helper-text text-left" id="exp-help"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <script>
-    $(function() {
-      $("#read-btn-1").click(function() {
+                    <!--Hosted Field for CC CVV-->
+                    <div class="row mb-4">
+                        <div class="col-lg-1 col-md-1"></div>
+                        <div class="col-lg-3 col-md-3 col-12 text-left">
+                            <span class="text-muted recorddetaillabel mr-1">Security Code *</span>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 text-lg-right text-md-right text-right text-sm-left">
+                            <div class="row">
+                                <div class="col-12 pr-1">
+                                    <div class="input-group">
+                                        <div class="mr-2" data-bluesnap="cvv">
+                                            <input type="text" class="center-block form-control" id="cvv" required/>
+                                        </div>
+                                    </div>
+                                    <span class="helper-text text-left" id="cvv-help"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        var myCard = $('#my-card-1');
-
-        var cardNumber = myCard.CardJs('cardNumber');
-        var cardType = myCard.CardJs('cardType');
-        var name = myCard.CardJs('name');
-        var expiryMonth = myCard.CardJs('expiryMonth');
-        var expiryYear = myCard.CardJs('expiryYear');
-        var cvc = myCard.CardJs('cvc');
-
-        $("#card-number-1").val(cardNumber);
-        $("#card-type-1").val(cardType);
-        $("#name-1").val(name);
-        $("#expiry-month-1").val(expiryMonth);
-        $("#expiry-year-1").val(expiryYear);
-        $("#cvc-1").val(cvc);
-      });
-
-
-    //   $("#read-btn-2").click(function() {
-
-    //     var myCard = $('#my-card-2');
-
-    //     var cardNumber = myCard.CardJs('cardNumber');
-    //     var cardType = myCard.CardJs('cardType');
-    //     var name = myCard.CardJs('name');
-    //     var expiryMonth = myCard.CardJs('expiryMonth');
-    //     var expiryYear = myCard.CardJs('expiryYear');
-    //     var cvc = myCard.CardJs('cvc');
-
-    //     $("#card-number-2").val(cardNumber);
-    //     $("#card-type-2").val(cardType);
-    //     $("#name-2").val(name);
-    //     $("#expiry-month-2").val(expiryMonth);
-    //     $("#expiry-year-2").val(expiryYear);
-    //     $("#cvc-2").val(cvc);
-    //   });
-    });
-  </script>
-
+                </div>
+            </div>
+        </div>
+        <div class="row flex-row-reverse">
+            <div class="col-12 col-lg-6 float-right pl-1 pr-1 text-center text-lg-left">
+                <button class="btn btn-outline-primary btn-lg col-xs-6 col-xs-offset-3" type="button" id="submit-button">Next</button>
+            </div>
+            <div class="col-12 col-lg-6 float-lg-left pl-0 pr-0 text-center text-lg-right">
+                <input type="button" name="btnBack" value="Back" id="btnBack" class="btn btn-lg btn-outline-primary mb-3">
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+</main>

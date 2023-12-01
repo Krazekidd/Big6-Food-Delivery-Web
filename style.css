@@ -110,7 +110,7 @@ section{
     margin-left: -10px;
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
-    background: url(/images/red_line.png);
+    background: url(/images/red_line.jpg);
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
@@ -119,7 +119,7 @@ section{
     margin-left: -10px;
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
-    background: url(/images/red_line.png);
+    background: url(/images/red_line.jpg);
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;

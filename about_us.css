@@ -1,4 +1,4 @@
-{
+*{
     font-family: Nunito, sans-serif;
   }
   
@@ -43,7 +43,7 @@
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
-    background-color: rgb(41, 37, 37);
+    background-color: rgba(20, 19, 19, 0.767);
     padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 10px;
@@ -52,6 +52,7 @@
   }
   
   .responsive-container-block.Container {
+    background-image: url(img/bckgr.jpg);
     max-width: 1320px;
     align-items: center;
     justify-content: center;
@@ -85,7 +86,7 @@
     font-size: 40px;
     line-height: 64px;
     font-weight: 900;
-    color: #e21111;
+    color: #ff0404;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 40px;
@@ -518,13 +519,21 @@ body {
   }
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .wrapper {
-  padding: 20px; /* Adjust as needed */
-  margin: 20px; /* Adjust as needed */
+  width: 100%;
 }
 
 .Our_Values {
-  background-color: white; /* Add a white background */
+  background-color: rgba(255, 255, 255, 0.5); /* Add a white background */
+  color:#fff;
+  border-radius: 5px;
+  margin-bottom: 70px;
 }
 
 
@@ -543,19 +552,36 @@ body {
 }
 
 .Our_Values img {
-  max-width: 100%;
-  height: auto;
+  max-width: 50%;
+  height: 100px;
 }
 
 
 .Our_Story {
-  background-color: lightblue; /* Add a light blue background */
+  background-color: #c22020a4; /* Add a light blue background */
+  text-align: center;
+  line-height: 3rem;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Adjust the padding as needed */
+  margin-bottom: 70px;
 }
 
 .Contact_Us {
-  background-color: darkgrey; /* Add a dark grey background */
-  color: white; /* Change text color to white */
+  background-color: darkgrey;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* Adjust as needed */
 }
+
+
 
 .Social_Media {
   display: flex;
@@ -580,7 +606,7 @@ body {
 }
 
 .Social_Media a i{
-  font-size: 50px
+  font-size: 50px;
   transition: transform 0.5s;
   color: #777;
 }
@@ -610,4 +636,29 @@ a:hover .fa-whatsapp{
 a:hover .fa-instagram{
   color: #f14843;
 }
+
+.Last_note {
+  background-color: rgba(34, 32, 32, 0.582); /* Adjust the color as needed */
+  color: white; /* Change text color if needed */
+  padding: 20px; /* Adjust as needed */
+  margin: 20px; /* Adjust as needed */
+  
+}
+.Card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leftColumn {
+  flex: 0 0 calc(66.666667% - 20px);
+  margin-right: 20px;
+}
+
+.rightColumn {
+  flex: 0 0 calc(33.333333% - 20px);
+}
+
+
+
 

@@ -1,0 +1,70 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+    }
+    a:hover {
+        color: aquamarine;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    .slideshow-container {
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%; /* Make sure the slide takes the full width */
+      text-align: center;
+    }
+
+    .mySlides img {
+      width: 100%; /* Make the image inside the slide take the full width */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    #gift-cards {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .gift-card {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    #slide {
+      width: 100%; /* Adjusted to 100% to take the full width of the container */
+      max-height: 250px; /* Set a maximum height to prevent excessive stretching */
+      margin: auto; /* Center the image horizontally */
+    }
+    img {
+        width: 200px;
+        height: 150px;
+    }

@@ -2,6 +2,9 @@
 let cartIcon = document.querySelector('#cart-icon')
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('#close-cart')
+let cartItemsList = [];
+var amount = 0;
+
 
 cartIcon.onclick = () =>{
     cart.classList.add("active");
@@ -40,6 +43,8 @@ function ready(){
 
 function buybuttonClicked(){
     alert("Your Order has been Placed")
+    storeCartItemsToCSV();
+    window.location.href = "checkout.html";
     var cartContent = document.getElementsByClassName("cart-content")[0];
     while (cartContent.hasChildNodes()){
         cartContent.removeChild(cartContent.firstChild);
@@ -78,11 +83,13 @@ function addProductToCart(title, price,productimg){
     var cartItemsNames = cartItem.getElementsByClassName("cart-product-title");
     for (var i = 0; i < cartItemsNames.length; i++){
         if(cartItemsNames[i].innerText == title){
-            alert('You have aldreadd added this item to the cart');
+            alert('You have already added this item to the cart');
             return;
         }
+    cartItemsList.push({ title, price, quantity: 1 });
     updatetotal();
     }
+    
     var cartBoxContent = `
                         <img src="${productimg}" alt="" class="cart-img">
                         <div class="detail-box">
@@ -111,6 +118,45 @@ function updatetotal(){
         total = total + (price * quantity);
     }
         total = Math.round(total*100)/100;
+        amount = total;
         document.getElementsByClassName('total-price')[0].innerText = "$" + total;
     
+}
+
+
+function storeCartItemsToCSV() {
+    const csvContent = "data:text/csv;charset=utf-8," +
+        "Title,Price,Quantity,Total\n" +
+        cartItemsList.map(item => `${item.title},${item.price},${item.quantity},${amount}`).join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const formData = new FormData();
+    formData.append('cartData', blob, 'cart_items.csv');
+    fetch('https://example.com/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Server response:', data);
+    })
+    .catch(error => {
+        console.error('Error during fetch operation:', error);
+    });
+
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updatetotal();
+/*
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = "cart_items.csv";
+    link.click();*/
 }

@@ -1,9 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPPORT </title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #5b9cb6;
+    }
+
+    #chatbox {
+      max-width: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      display: none; /* Initially hide the chatbox */
+    }
+
+    #chat-messages {
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      background-color: #fff;
+    }
+
+    #input-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+
+    #message-input {
+      flex-grow: 1;
+      padding: 8px;
+      margin-right: 10px;
+    }
+
+    #send-button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    #b{
+        width: 100px;
+        height: 30px;
+        background-color: rgb(139, 229, 229);   
+    }
+    #b:hover {
+        background-color: aquamarine;
+    }
+    p,h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        margin-bottom: 70px;
+    }
+    .btn-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .b1 {
+        margin-right: 10px;
+    }
+  </style>
 </head>
+
+<body>
+    <div class="top">
+        <h2>Chat with our experts/chatbot immediately for any issues or assistance: (24hrs)</h2>
+        <p>Who would you like to speak to? </p>
+    </div>
+    <div class="btn-group">
+        <button class="b1" id="b" onclick="showExpertChat()">Expert</button>
+        <button class="b2" id="b" onclick="showChatbot()">Chatbot</button>
+    </div>
+    
+
+  <div id="chatbox">
+    <div id="chat-messages"></div>
+    <div id="input-area">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="send-button" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function showExpertChat() {
+      // You can add expert-specific functionality here
+      console.log("Expert chat selected");
+    }
+  
+    function showChatbot() {
+      // Show the chatbox for the chatbot
+      document.getElementById("chatbox").style.display = "block";
+  
+      // Greet the customer when the chatbot is shown
+      var chatMessages = document.getElementById("chat-messages");
+      var greeting = document.createElement("div");
+      greeting.textContent =
+        "Chatbot: What would you like assistance with? Chatbot assistance: Ordering, Gift card, Technical issues, and Other!";
+      chatMessages.appendChild(greeting);
+  
+      // Scroll to the bottom to show the greeting
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  
+    function sendMessage() {
+      var messageInput = document.getElementById("message-input");
+      var chatMessages = document.getElementById("chat-messages");
+  
+      var message = messageInput.value.trim();
+      if (message !== "") {
+        var newMessage = document.createElement("div");
+        newMessage.textContent = "You: " + message;
+        chatMessages.appendChild(newMessage);
+  
+        // Clear the input field
+        messageInput.value = "";
+  
+        // Check user's input for specific keywords
+        if (
+          message.toLowerCase().includes("ordering") ||
+          message.toLowerCase().includes("gift") ||
+          message.toLowerCase().includes("technical")
+        ) {
+          // Generate a response based on the keyword
+          var reply = document.createElement("div");
+          reply.textContent = getChatbotResponse(message);
+          chatMessages.appendChild(reply);
+  
+          // Scroll to the bottom to show the latest messages
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        } else {
+          // Simulate a default reply
+          setTimeout(function () {
+            var reply = document.createElement("div");
+            reply.textContent =
+              "Chatbot: What would you like assistance with? Chatbot assistance: Ordering, Gift card, Technical issues, and Other!";
+            chatMessages.appendChild(reply);
+  
+            // Scroll to the bottom to show the latest messages
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          }, 500);
+        }
+      }
+    }
+  
+    function getChatbotResponse(userMessage) {
+      // Create responses based on specific keywords
+      if (userMessage.toLowerCase().includes("ordering")) {
+        return "Chatbot: Sure, I can help you with placing an order. Please provide more details about the items you want to order.";
+      } else if (userMessage.toLowerCase().includes("gift")) {
+        return "Chatbot: Great! I can assist you with gift-related queries. Do you have a specific type of gift in mind?";
+      } else if (userMessage.toLowerCase().includes("technical")) {
+        return "Chatbot: Technical issues? No worries! Please describe the technical problem you're facing, and I'll do my best to help.";
+      } else {
+        // Default response
+        return "Chatbot: What would you like assistance with? Chatbot assistance: Ordering, Gift card, Technical issues, and Other!";
+      }
+    }
+  </script>
+  
+
+</body>
+
+</html>
