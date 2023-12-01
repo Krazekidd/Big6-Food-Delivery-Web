@@ -1,16 +1,22 @@
+body {
+  background-image: url('/img/check.jpeg');
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  color:white;
+}
 .btn-outline-warning {
   background-color: #6c757d;
-  color: #007bff;
-  border-color: #6c757d;
+  color: white;
+
 }
 
 .btn-outline-warning:hover {
-  background-color: #007bff;
+  background-color: #2a7aca;
   color: #fff;
-  border-color: #007bff;
 }
 
 .blue-card {
-  background-color: #007bff;
+  background-color: rgba(78, 5, 5, 0.651);
   color: #fff;
 }
