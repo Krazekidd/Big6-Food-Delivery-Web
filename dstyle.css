@@ -1,0 +1,71 @@
+#map {
+    height: 300px; 
+    margin-top: 20px; 
+}
+.container {
+    
+    padding: 20px; 
+}
+form {
+    margin-top: 10px; 
+    padding: 10px; 
+    
+}
+
+.mheader {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(124, 168, 187);
+    width: 100%;
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-color: #f8f9fa; 
+    margin: 0;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%; /* Make it round */
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+#clockImg{
+    cursor: pointer;
+}
+
+h1 {
+    margin-right: 20px;
+}
+.form-control {
+    width: 100px;
+    height: 50px;
+}
+#datepicker { /*input field for date and label, extra space*/
+    margin-left: 20px;
+}
+#igd{
+    margin-bottom: 50px;  /*space between date and clock*/
+}
+
+#deliveryInstructions {  /*text field for instructions*/
+    width: 600px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button {
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: rgb(124, 168, 187);
+}

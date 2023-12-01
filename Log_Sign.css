@@ -1,0 +1,91 @@
+body {
+    background-image: url(/images/BACKGRO.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 60%; /* Adjust card width */
+}
+
+.card-left {
+    background: #333;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    border-radius: 20px; /* Rounded corners */
+}
+
+.card-left h1 {
+    color: white;
+}
+
+.wave-image {
+    width: 100%; /* Make the image fill the container width */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.card-right {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.log_sign{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.button {
+    margin: 20px 10px;
+    padding: 15px 30px; /* Adjust button padding */
+    background-color: darkgrey;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust font size */
+    transition: background-color 0.3s ease;
+    
+}
+
+.button + .button {
+    margin-left: 20px;
+}
+
+.button:hover {
+    background-color: grey;
+}
+
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 15px; /* Adjusted back button padding */
+    background-color: darkgrey;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button img {
+    width: 20px; /* Set the width of the arrow image */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 5px; /* Add some spacing between the arrow and text */
+}
+
+.back-button:hover {
+    background-color: grey;
+}

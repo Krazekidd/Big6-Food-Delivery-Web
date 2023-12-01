@@ -4,54 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SignUp.css">
-    <title>Customer Account</title>
+    <title>Sign Up</title>
 </head>
-<body>
-    <div class="container">
-        <form action="#" method="post" class="details">
-            <h2>!SIGN UP!</h2>
-            <div class="sec1">
-                <label for="firstName">First name:</label>
-                <input type="text" name="firstName" id="userInnput1" placeholder="Enter first name">
+<body>   
 
-                <label for="middleName">Middle name:</label>
-                <input type="text" name="middleName" id="userInnput2" placeholder="Enter first name">
-    
-    
-                <label for="lastName">Last name:</label>
-                <input type="text" name="lastName" id="userInnput3" placeholder="Enter last name">
-            </div>
-    
-                <label for="email1">Personal/work Email:</label>
-                <input type="text" name="email1" id="userInnput4" placeholder="Enter personal email">
-    
-                <div class="sec2">
-                    <label for="phoneh">Home Phone:</label>
-                    <input type="text" name="phoneh" id="userInnput5" placeholder="Enter phone (xxx-xxx-xxxx)">
-    
-                   <label for="phonew">Work Phone:</label>
-                   <input type="text" name="phonew" id="userInnput6" placeholder="Enter phone (xxx-xxx-xxxx)">
-                </div>
-                
-    
-                <label for="password">Create password:</label>
-                <input type="text" name="password" id="userInnput7" placeholder="Enter password">
+<div class="details">
+    <h1>REGISTER</h1>
+    <div class="button-container">
+        <a href="Sign_Up.html" class="action-link">Sign Up</a>
+        <a href="login.html" class="action-link">Log In</a>
+    </div>
+<div class ="Sign Up container">
+    <h2>Sign Up Now!</h2>
+    <div class="sec1">
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstName" id="userInnput1" placeholder="Enter first name">
 
-                <label for="password2">Re-enter password for Confirmation:</label>
-                <input type="text" name="password2" id="userInnput8" placeholder="Enter password">
+        <label for="middleName">Middle name:</label>
+        <input type="text" name="middleName" id="userInnput2" placeholder="Enter middle name">
 
-                <div class="welcome"></div>  <!--javascript-->
-    
-                <a href>I forgot my password</a>
-    
-                <button type="button" class="btn">Register</button> <!--javascript-->
+        <label for="lastName">Last name:</label>
+        <input type="text" name="lastName" id="userInnput3" placeholder="Enter last name">
+    </div>
 
-                <div class="signin">
-                    <p class="text">Already have an account?</p>
-                    <a href>Sign in</a>
-                </div>
-                
-            </div>
-        </form>
+    <label for="email1">Personal/work Email:</label>
+    <input type="text" name="email1" id="userInnput4" placeholder="Enter personal email">
+
+    
+    <div class="sec2">
+        <label for="phonem">Mobile Phone:</label>
+        <input type="text" name="phonem" id="userInnput9" placeholder="Enter phone (xxx-xxx-xxxx)">
+
+        <label for="phoneh">Home Phone:</label>
+        <input type="text" name="phoneh" id="userInnput5" placeholder="Enter phone (xxx-xxx-xxxx)">
+
+        <label for="phonew">Work Phone:</label>
+        <input type="text" name="phonew" id="userInnput6" placeholder="Enter phone (xxx-xxx-xxxx)">
+    </div>
+
+    <div class="password-container">
+        <label for="password">Create password: </label>
+        <input type="text" name="password" id="userInnput7" placeholder="Enter password">
+    
+        <label for="password2">Re-enter password: </label>
+        <input type="text" name="password2" id="userInnput8" placeholder="Re-enter password">
+    </div>
+
+    <div class="welcome"></div> <!--javascript-->
+
+    <a href="#">I forgot my password</a>
+    <div class="btn-container">
+        <a href="Account.html">
+            <button type="button" class="btn">Register</button>
+        </a>
+    </div>
+    <div class="signin">
+        <p class="text">Already have an account?</p>
+        <a href="login.html">Log in</a>
+    </div>
+</div>
+</div>
+
 </body>
 </html>

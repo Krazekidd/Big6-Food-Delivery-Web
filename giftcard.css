@@ -1,0 +1,102 @@
+/*****navbar1*****/
+.navbar1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+}
+#searchF {
+    height: 50px;
+    width: 600px;
+    margin-left: 15px;
+    
+}
+.pic1 {
+    height: 80px;
+    width: 200px;
+}
+.pic2 {
+    height: 20px;
+    width: 20px;
+}
+#btn {
+    height: 50px;
+    width: 60px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/*****navbar2*****/
+.navbar2 {
+    background-color: rgb(87, 159, 208);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    display: flex;
+}
+.item {
+    margin-right: 20px;
+    
+}
+
+.item:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+/* /gift box/ */
+.giftbox {
+    width: 100%;
+    height: 350px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+
+    padding: 10px; /* Adjust as needed */
+    
+}
+.giftbox-button {
+    height: 40px;
+    width: 90px;
+    background-color: white;
+    border-radius: 5px;
+}
+.giftbox-button:hover{
+    background-color: rgb(87, 159, 208);
+}
+/* /javascript part/ */
+.design-item {
+    margin: 10px; /* Adjust margin as needed */
+    text-align: center;
+}
+
+.design-item img {
+    width: 150px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+.design-item p {
+    margin-top: 5px; /* Adjust the space between image and text */
+    font-size: 14px; /* Adjust the font size of the occasion text */
+    font-weight: bold; /* Optional: Add font-weight for bold text */
+}
+.user-choice-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
+    gap: 10px; /* Adjust the gap between items */
+}

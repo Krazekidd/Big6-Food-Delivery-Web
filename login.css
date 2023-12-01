@@ -1,0 +1,122 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    background: rgb(163, 190, 226);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    color: black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+body {
+    background-image: url(/images/BACKGROU.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.imgContainer{
+    flex: 1;
+    overflow: hidden;
+}
+#sideImg{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.formContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+  
+label {
+    margin-bottom: 5px;
+}
+  
+input {
+    flex: 1;
+    border-radius: 5px; /* Curved edges */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+  
+.forget {
+    display: flex;
+    flex-direction: column; /*Place 'rember me' and 'forgot password' in differnt lines*/
+    justify-content: space-between;
+    align-items: right;
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+    box-sizing: border-box;
+    background: darkgrey; /* Dark grey before hovering */
+    color: white;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background: rgb(30, 144, 255); /* Blue on hover */
+}
+
+.goBackContainer{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#goBack{
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.regLink{
+    color:rgb(0, 94, 255);
+    text-decoration: none;
+}
+.regLink:hover {
+    color: rgb(98, 30, 255); /* Blue on hover */
+    text-decoration: underline;
+}
+
+.arrowImg{
+    width: 50px;
+    height: auto;
+}

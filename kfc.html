@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+
+        <div class="nav container">
+            <a href="Cart.html" class="logo">KENTUCKY FRIED CHICKEN</a>
+            <i class='bx bx-shopping-bag' id="cart-icon"></i> 
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+
+                <div class="cart-content">
+
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <button type="button" class="btn-buy">Buy Now</button>
+                <i class='bx bxs-x-circle' id="close-cart"></i>
+            </div>
+        </div>
+        
+    </header>
+    <section class="shop container">
+        <h2 class="section-title">Delivery Products</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="/images/bigdeal.jpg" alt="" class="product-img">
+                <h2 class="product-title">BIG DEAL</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/mealdeal.jpg" alt="" class="product-img">
+                <h2 class="product-title">MEAL DEAL</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/bigsix.jpg" alt="" class="product-img">
+                <h2 class="product-title">BIG SIX</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/spicyzinger.jpg" alt="" class="product-img">
+                <h2 class="product-title">ZINGER</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box"> <!--bbq zinger-->
+                <img src="/images/zinger.jpg" alt="" class="product-img">
+                <h2 class="product-title">BBQ ZINGER</h2>
+                <span class="price">$950</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/bbqcombo.jpeg" alt="" class="product-img">
+                <h2 class="product-title">BBQ ZINGER COMBO</h2>
+                <span class="price">$1100</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/WINGS5ONLY.jpg" alt="" class="product-img">
+                <h2 class="product-title">WINGS 5 ONLY</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/WINGS5.jpg" alt="" class="product-img">
+                <h2 class="product-title">WINGS 5 COMBO</h2>
+                <span class="price">$1,020</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/WINGS8.jpg" alt="" class="product-img">
+                <h2 class="product-title">WINGS 8 COMBO</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/WINGS10ONLY.jpg" alt="" class="product-img">
+                <h2 class="product-title">WINGS 10 ONLY</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/WINGS10.jpg" alt="" class="product-img">
+                <h2 class="product-title">WINGS 10 COMBO</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/WINGS15ONLY.jpg" alt="" class="product-img">
+                <h2 class="product-title">WINGS 15 ONLY</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/hotwingsbigbox.jpeg" alt="" class="product-img">
+                <h2 class="product-title">HOT WINGS BIG BOX</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/krispersbigbox.jpg" alt="" class="product-img">
+                <h2 class="product-title">KRISPERS BIG BOX</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/zingerbigbox.jpeg" alt="" class="product-img">
+                <h2 class="product-title">ZINGER BIG BOX</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/POPCHICK.jpg" alt="" class="product-img">
+                <h2 class="product-title">POPCORN CHICKEN ONLY(LG) COMBO</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/POPCHICKCOMBO.jpg" alt="" class="product-img">
+                <h2 class="product-title">POPCORN CHICKEN (LG) COMBO</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/saladwrap.jpg" alt="salad wrap" class="product-img">
+                <h2 class="product-title">SALAD WRAP</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/saladonly.jpg" alt="" class="product-img">
+                <h2 class="product-title">SALAD ONLY(LARGE)</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/saladcomboreg.jpg" alt="" class="product-img">
+                <h2 class="product-title">SALAD COMBO(REGULAR)</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/saladlrgcombo.jpg" alt="" class="product-img">
+                <h2 class="product-title">SALAD(LARGE) COMBO</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/FAM9.jpg" alt="" class="product-img">
+                <h2 class="product-title">FAMILY 9</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/FAM12.jpg" alt="" class="product-img">
+                <h2 class="product-title">FAMILY 12</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/cookie.jpeg" alt="" class="product-img">
+                <h2 class="product-title">COOKIE</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/CORN.jpeg" alt="" class="product-img">
+                <h2 class="product-title">CORN</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/biscuits.jpg" alt="" class="product-img">
+                <h2 class="product-title">BISCUIT</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/coleslaw.jpg" alt="" class="product-img">
+                <h2 class="product-title">COLESLAW</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/MashedPotatoes.jpg" alt="" class="product-img">
+                <h2 class="product-title">MASHPOTATOES</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/kfcpie.jpg" alt="" class="product-img">
+                <h2 class="product-title">PIE</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/water.png" alt="" class="product-img">
+                <h2 class="product-title">WATER</h2>
+                <span class="price">$110</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/7up.png" alt="" class="product-img">
+                <h2 class="product-title">7 UP</h2>
+                <span class="price">$110</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/DG Grape.png" alt="" class="product-img">
+                <h2 class="product-title">D&G Grape</h2>
+                <span class="price">$110</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/DG Kola.png" alt="" class="product-img">
+                <h2 class="product-title">D&G Kola Champagne</h2>
+                <span class="price">$110</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/PEPSI.png" alt="" class="product-img">
+                <h2 class="product-title">PEPSI</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+            <div class="product-box">
+                <img src="/images/Splash.png" alt="" class="product-img">
+                <h2 class="product-title">SPLASH</h2>
+                <span class="price">$995</span>
+                <i class='bx bx-shopping-bag add-cart'></i> 
+            </div>
+        </div>
+    </section>
+    <script src="food.js"></script>
+</body>
+</html>

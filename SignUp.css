@@ -1,57 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Customer Account</title>
-</head>
-<body>
-    <div class="container">
-        <form action="#" method="post" class="details">
-            <h2>!SIGN UP!</h2>
-            <div class="sec1">
-                <label for="firstName">First name:</label>
-                <input type="text" name="firstName" id="userInnput1" placeholder="Enter first name">
+body {
+    background-image: url(/images/backgr.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-                <label for="middleName">Middle name:</label>
-                <input type="text" name="middleName" id="userInnput2" placeholder="Enter first name">
-    
-    
-                <label for="lastName">Last name:</label>
-                <input type="text" name="lastName" id="userInnput3" placeholder="Enter last name">
-            </div>
-    
-                <label for="email1">Personal/work Email:</label>
-                <input type="text" name="email1" id="userInnput4" placeholder="Enter personal email">
-    
-                <div class="sec2">
-                    <label for="phoneh">Home Phone:</label>
-                    <input type="text" name="phoneh" id="userInnput5" placeholder="Enter phone (xxx-xxx-xxxx)">
-    
-                   <label for="phonew">Work Phone:</label>
-                   <input type="text" name="phonew" id="userInnput6" placeholder="Enter phone (xxx-xxx-xxxx)">
-                </div>
-                
-    
-                <label for="password">Create password:</label>
-                <input type="text" name="password" id="userInnput7" placeholder="Enter password">
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    background: linear-gradient(rgba(66, 14, 134, 0.7), rgba(66, 14, 134, 0.7));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
 
-                <label for="password2">Re-enter password for Confirmation:</label>
-                <input type="text" name="password2" id="userInnput8" placeholder="Enter password">
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Added space between forget password and register button */
+    width: 100%;
+}
 
-                <div class="welcome"></div>  <!--javascript-->
-    
-                <a href>I forgot my password</a>
-    
-                <button type="button" class="btn">Register</button> <!--javascript-->
+.action-link {
+    flex: 1;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    background: darkgrey; /* Dark grey before hovering */
+    color: white;
+}
 
-                <div class="signin">
-                    <p class="text">Already have an account?</p>
-                    <a href>Sign in</a>
-                </div>
-                
-            </div>
-        </form>
-</body>
-</html>
+.action-link:hover {
+    background: rgb(30, 144, 255); /* Blue on hover */
+}
+
+.sec1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.sec1 label {
+    margin-right: 10px;
+}
+
+.sec1 input {
+    flex: 1;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#userInnput1,
+#userInnput2,
+#userInnput3 {
+    margin-right: 20px; /* Added gap between first name, middle name, and last name */
+}
+
+
+#userInnput4 {
+    border-radius: 5px;
+    flex: 3; /* Adjusted width for personal/work email */
+    max-width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 40px; /* Added padding between personal/work email input */
+    width: calc(70% - 5px); /* Ensure the input stretches across 3 rows */
+}
+
+
+
+.sec2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+    margin-right: -10px; /* Adjusted margin to prevent extra space */
+}
+
+.sec2 label {
+    margin-right: 10px;
+}
+
+.sec2 input {
+    flex: 1;
+    border-radius: 5px;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+#userInnput9 {
+    flex: 1; /* Adjusted width for mobile phone */
+    margin-right: 10px; /* Added margin between mobile phone and home phone */
+}
+
+.password-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+#userInnput7,
+#userInnput8 {
+    flex: 1;
+    border-radius: 5px; /* Curved edges */
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.sec3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0; /* Adjusted space between sec3 and password */
+}
+
+.sec3 input {
+    flex: 1;
+    border-radius: 10px; /* Curved box */
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+
+
+
+
+.btn {
+    height: 60px; /* Increased button height */
+    width: 150px;
+    border-radius: 5px;
+    background-color: darkgrey; /* Dark grey before hovering */
+    border: none;
+    padding: 10px;
+    margin: 20px auto; /* Center the button horizontally and add margin at the top and bottom */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(30, 144, 255);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.signin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Added space between sign in and log in links */
+}
+
+.signin a {
+    color: white; 
+    text-decoration: none; /* Removed text decoration */
+    margin-left: 10px; /* Added margin for space between text and link */
+}

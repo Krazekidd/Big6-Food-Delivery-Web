@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIG 6 FOOD DELIVERY </title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <title>BIG 6 Delivery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<!-------------------------------- HEADER SECTION-------------------------------->
 
+<body>
     <header>
-            <nav class = "navbar">
-                <div class = "navdiv"></div>
-                <div class = "logo"><a href = "#">Big6Logo</a></div>
-                <ul>
-
-                    <nav>
-                        <div id="navbar">
-                          <ul>
-                            <li><a style="border-right: solid;" class+"active" href="index.html"> Home</a>
-                            <li>
-                            <li><a style="border-right: solid;" class+"active" href="Account.html"> Account</a>
-                                <ul>
-                                    <li><a href="Sign_Up.html">Sign Up</a></li>
-                                    <li><a href="Profile.html"> My Profile</a></li>
-                                  </ul>
-                            </li>
-                            <li><a style="border-right: solid;" class+"active" href="Giftcard.html"> Giftcard</a>
-                            </li>
-                            <li><a style="border-right: solid;" class+"active" href="Cart.html"> Cart</a>
-                            </li>
-                            <li><a style="border-right: solid;" class+"active" href="About_us.html"> About us</a></li>
-                            <li><a style="border-right: solid;" class+"active" href="Support.html"> Support us</a></li>
-                          </ul>
-                      </nav>
-                      <section></section>
-                    </div>
-                  </head>
-    </header>
-    <main>
-        <body>
-            <div class="middle-design">
-            <header>
-                <left><img src="Big6.png" width="8%" height="10%"></left>
-                <centre>
-                    <h1>BIG 6 FOOD DELIVERY</h1>
-                </centre>
-            <h3>Sign up Today!</h3>
-            
-            <button><a href = "Log in">SignIn/sIGNUp</a> </button>
-            <button><a href = "Log out">SignOut</a> </button>
-        <section class="newsletter">
-            <div class="container">
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <input type="search" name="search" id="search" placeholder="Insert a text">
-                    </div>
-                    <button type="searchsubmit" class="btn">search</button>
-                </form>
-                <div class="message"></div>
-            </div>
-        </section>
-    </main>
-<!-------------------------------- FOOTER SECTION-------------------------------->
-    <footer>
-        <div class="container">
-            <p> &copy; 2023, names</p>
+        <div class="logo-container">
+            <img src="images/Big6.png" alt="Logo" class="logo">
+            <h1>BIG 6 FOOD DELIVERY</h1>
         </div>
-    </footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href=Account.html class="dropbtn">Account</a>
+                    <div class="dropdown-content">
+                        <a href="Log_Sign.html">Register</a>
+                        <a href="Bearer.html">Bearer</a>
+                        <a href="Customer.html">Customer</a>
+                        
+                    </div>
+                </li>
+            
+                <li><a href="Giftcard.html">Giftcard</a></li>
+                <li><a href="Cart.html">Cart</a></li>
+                <li><a href="About_us.html">About Us</a></li>
+                <li><a href="Support.html">Support</a></li>
+                <!-- temporary payment placement -->
+                <a href="payment.html">Payment</a>
+            </ul>
+        </nav>
+    </header>
+    <section class="top-layer">
+        <div class="container_1">
+            <div class="left-side">
+                <div class="description-field">
+                    <a href="Delivery.html">
+                        <button class="btn">Are you ready for a delivery?</button>
+                      </a>
+                    <h1>Would you like Breakfast, Lunch or Dinner?</h1>
+                    <h2>On Time, we will Deliver Everytime!</h2>
+                </div>
+            </div>
+            <div class="right-side">
+                <img src="/images/man.png" alt="Delivery Driver" class="Driver">
+            </div>
+        </div>
+    </section>
+    <div class="middle-layer">
+        <div class="head">
+            <h1>WHAT IS OFFERED</h1>
+        </div>
+        <div class="slider">
+            <a href="Cart.html"><img src="/images/juici.png" class="slide" alt="Image 1"></a>
+            <a href="Cart.html"><img src="/images/fishpot.png" class="slide" alt="Image 2"></a>
+            <a href="Cart.html"><img src="/images/hut.png" class="slide" alt="Image 3"></a>
+            <a href="Cart.html"><img src="/images/spot.png" class="slide" alt="Image 4"></a>
+            <a href="Cart.html"><img src="/images/kfc.png" class="slide" alt="Image 5"></a>
+            <a href="Cart.html"><img src="/images/dom.png" class="slide" alt="Image 6"></a>
+            <a href="Cart.html"><img src="/images/pop.png" class="slide" alt="Image 7"></a>
+            <a href="Cart.html"><img src="/images/grill.png" class="slide" alt="Image 8"></a>
+            <a href="Cart.html"><img src="/images/bk.png" class="slide" alt="Image 9"></a>
+            <a href="Cart.html"><img src="/images/wel.jpg" class="slide" alt="Image 10"></a>
+        </div>
+    </div>
 </body>
-</html> 
- 
-     
+<footer>
+    <p>&copy; 2023 Demo Websites. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

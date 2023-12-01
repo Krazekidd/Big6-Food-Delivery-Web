@@ -3,7 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFTCARD</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <title>Giftcard</title>
+    <link rel="stylesheet" href="giftcard.css">
+    <script src="giftcard.js"></script>
 </head>
+<body>
+    <div class="container">
+        <div class="navbar1">
+            <img src="images/giftcart.jpg" alt="image of giftcart logo" class="pic1">
+            <input id="searchF" type="search" name="gift" placeholder="Search for a giftcard design">
+            <button id="btn"><img src="images/search.png" alt="search icon" class="pic2"></button>
+        </div> <!--child 1-->
+        <div class="navbar2">
+            <ul class="items">
+                <li class="item"><a href="index.html">Home</a></li>
+                <li class="item"><a href="GiftCardExtension.html">Gift Cards</a></li>
+                <li class="item"><a href="About_us.html">Contact</a></li>
+                <li class="item"><a href="About_us.html">About</a></li>  
+            </ul>
+        </div> <!--child 2-->
+
+        <!--button and image-->
+        <div class="giftbox-container">
+            <img src="images/giftbox.png" alt="gift box" class="giftbox">
+            <div class="button-container">
+                <a href="Displaygiftcard.html"><button class="giftbox-button" onclick="showDesigns()">Choose Design</button></a>
+                <button class="giftbox-button" onclick="showForm()">Enter Details</button>
+            </div>
+        </div>
+
+        <div id="userChoice" class="user-choice-container"></div>
+
+</body>
+</html>
