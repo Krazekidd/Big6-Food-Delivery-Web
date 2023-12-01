@@ -13,21 +13,26 @@ const supabase = createClient(supabase_url, anon_key);
 
 const { data, error } = await supabase.auth.getSession()
 
-console.log(data["session"]["user"]["id"]);
+let id_user = data["session"]["user"]["id"];
 
 try {
     let { data: orders, error } = await supabase
     .from('current_orders')
     .select('item,cost') 
 
-    console.log(orders)
+    let total = 0
+    console.log(orders[0].item);
+
+    for (let i = 0; i < orders.length; i++) {
+      total +=  parseInt(orders[i].cost.replace(/[^0-9]/g, ''), 10);
+    }
 
     
     // JSON data
     const jsonData = orders;
-
-    // Function to add rows to the table
-    function addRowToTable(orders) {
+    for (let i = 0; i < orders.length; i++) {
+      // Function to add rows to the table
+      function addRowToTable(orders) {
         const productTable = document.getElementById("productTable");
 
         // Create a new row
@@ -37,20 +42,14 @@ try {
         // Populate the row with data
         newRow.innerHTML = `
             <div class="col-4">
-                ${orders.item}
+                ${orders[i].item}
             </div>
             <div class="col-2">
-                ${orders.cost}
+                ${orders[i].cost}
             </div>
-            <div class="col-3">
-                <div class="number">
-                    <span class="minus">-</span>
-                    <input class="txtQuantity" type="text" value="1"/>
-                    <span class="plus">+</span>
-                </div>
-            </div>
+  
             <div class="col-2">
-                ${orders.cost}
+                ${total}
             </div>
             <div class="col-1">
                 <a href="#" class="text-danger"><span style="color: rgb(255, 255, 255);">remove </span></a>
@@ -63,6 +62,28 @@ try {
 
     // Call the function with the JSON data
     addRowToTable(jsonData);
+    }
+
+
+
+
+    document.getElementById('CHECKOUT').addEventListener('click', function() {
+        async function inserter(){
+            const { data, error } = await supabase
+                .from('current_orders')
+                .update({ checkedout: true})
+                .eq('user_id', id_user)
+                .select()
+            }
+
+            inserter()
+
+
+            window.location.href = 'payment.html';
+    });
+
+
+ 
  
   } catch (error) {
     
