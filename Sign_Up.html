@@ -1,69 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="SignUp.css">
-    <title>Sign Up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up pages</title>
+  <link rel="stylesheet" href="login.css">
 </head>
-<body>   
-
-<div class="details">
-    <h1>REGISTER</h1>
-    <div class="button-container">
-        <a href="Sign_Up.html" class="action-link">Sign Up</a>
-        <a href="login.html" class="action-link">Log In</a>
-    </div>
-<div class ="Sign Up container">
-    <h2>Sign Up Now!</h2>
-    <div class="sec1">
-        <label for="firstName">First name:</label>
-        <input type="text" name="firstName" id="userInnput1" placeholder="Enter first name">
-
-        <label for="middleName">Middle name:</label>
-        <input type="text" name="middleName" id="userInnput2" placeholder="Enter middle name">
-
-        <label for="lastName">Last name:</label>
-        <input type="text" name="lastName" id="userInnput3" placeholder="Enter last name">
+<body>
+  <div class="wrapper">
+    <div class="imgContainer">
+        <img id="sideImg" src="/images/side.jpg" alt="login image">
     </div>
 
-    <label for="email1">Personal/work Email:</label>
-    <input type="text" name="email1" id="userInnput4" placeholder="Enter personal email">
+    <div class="formContainer">
 
+    <form action="#" id="loginForm">
+
+      <h2>Sign Up</h2>
+        <div class="input-field">
+            <label>Enter your email</label>
+            <input type="text" id="emailInput" required placeholder="Enter Email">
+      </div>
+
+      <div class="input-field">
+        <label>Enter your password</label>
+        <input type="password" id="passwordInput" required placeholder="Enter password">
+      </div>
+
+
+      <button  id="signupFor" class="btn">Sign Up</button>
+    </form>
     
-    <div class="sec2">
-        <label for="phonem">Mobile Phone:</label>
-        <input type="text" name="phonem" id="userInnput9" placeholder="Enter phone (xxx-xxx-xxxx)">
-
-        <label for="phoneh">Home Phone:</label>
-        <input type="text" name="phoneh" id="userInnput5" placeholder="Enter phone (xxx-xxx-xxxx)">
-
-        <label for="phonew">Work Phone:</label>
-        <input type="text" name="phonew" id="userInnput6" placeholder="Enter phone (xxx-xxx-xxxx)">
+    <div class="goBackContainer">
+        <a href="Sign_Up.html"><img class="arrowImg" src="/images/arrow.png" alt="go back image"></a>
+        <a href="Sign_Up.html"  id="goBack"><button class="btn">Go Back</button></a>
     </div>
-
-    <div class="password-container">
-        <label for="password">Create password: </label>
-        <input type="text" name="password" id="userInnput7" placeholder="Enter password">
     
-        <label for="password2">Re-enter password: </label>
-        <input type="text" name="password2" id="userInnput8" placeholder="Re-enter password">
-    </div>
-
-    <div class="welcome"></div> <!--javascript-->
-
-    <a href="#">I forgot my password</a>
-    <div class="btn-container">
-        <a href="Account.html">
-            <button type="button" class="btn">Register</button>
-        </a>
-    </div>
-    <div class="signin">
-        <p class="text">Already have an account?</p>
-        <a href="login.html">Log in</a>
+    <div class="register">
+        <p class="text">Already have an account?  <a href="login.html">Log in</a></p>
+       
     </div>
 </div>
-</div>
+  </div>
+
+  <script src="Sign_Up.js" type="module"></script>
+
 
 </body>
 </html>
