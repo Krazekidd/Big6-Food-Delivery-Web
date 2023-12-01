@@ -1,5 +1,4 @@
-html lang="en">
-  <head>
+ <head>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="payment.css">
@@ -8,12 +7,15 @@ html lang="en">
   </head>
   <main>
   <body>
+<div class="box" id="box1">
 
 <div class="container mb-5 mt-5">
     <div class="row mt-4">
-        <div class="h4 col-12">Payment</div>
+        <div class="h4 col-12"><span style="color: white;"><B>PAYMENT</B></span></div>
         <div class="col-12">
+            <span style="color: white;">
             All transactions are secure and encrypted.
+            </span>
         </div>
     </div>
     
@@ -27,7 +29,7 @@ html lang="en">
                     </label>
                 </h6>
             </div>
-    
+            
             <div id="collapseCreditDebitInfo" class="collapse show" aria-labelledby="creditDebit" data-parent="#paymentMethods">
                 <div class="card-body">
                     Credit and debit card info if any.
@@ -64,6 +66,7 @@ html lang="en">
                 </div>
             </div>
         </div>
+        
         <div class="card">
             <div class="card-header" id="googlePay">
                 <h6 class="mb-0 ml-4">
@@ -79,23 +82,45 @@ html lang="en">
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row text-center">
-        <div class="col-md-12 col-lg-12">
-            <div class="row text-muted">
-                <div class="h2 col-12">Payment</div>
-                <div class="col-lg-12 col-md-12 dashhead-subtitle h6 text-capitalize text-muted">
-                    <span id="viewCart" >Cart</span> &#187; <span id="viewInformation">Information</span> &#187; <span id="viewShipping">Shipping</span> &#187; <span id="payment" > <span id="enterpayment" class="text-warning">Enter Payment Card Info</span> &#187; <span id="confirm" >Confirm</span> </span>
+        <div class="card">
+            <div class="card-header" id="Whatsapp">
+                <h6 class="mb-0 ml-4">
+                    <input class="form-check-input" type="radio" name="rbPayments" id="rbWhatsapp" data-toggle="collapse" data-target="#collapseWhatsappPayInfo" aria-expanded="false" aria-controls="collapseWhatsappInfo">
+                    <label class="form-check-label" for="rbWhatsapp">
+                        Whatsapp Pay
+                    </label>
+                </h6>
+            </div>
+            <div id="collapseWhatsappPayInfo" class="collapse" aria-labelledby="WhatsappPay" data-parent="#paymentMethods">
+                <div class="card-body">
+                    Whatsapp info
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
+
+<div class="box" id="box2">
+    <div class="row text-center">
+        <div class="col-md-12 col-lg-12">
+            <div class="row text-muted">
+                <div class="h2 col-12"><span style="color: white;">Payment</span></div>
+                <div class="col-lg-12 col-md-12 dashhead-subtitle h6 text-capitalize text-muted">
+                    <span id="viewCart" ><span style="color: white;">Cart</span></span> &#187; <span id="viewInformation"><span style="color: white;">Information</span></span> &#187; <span id="viewShipping"><span style="color: white;">Shipping</span></span> &#187; <span id="payment" > <span id="enterpayment" class="text-warning">Enter Payment Card Info</span> &#187; <span id="confirm" ><span style="color: white;">Confirm</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- box in box2 -->
+    <div class="box" id="box2_1">
     <div id="pnlCreditCardSection" class="mt-5">
         <div class="mx-auto">
             <div class="row justify-content-center">
                 <div class="col-9 my-4 py-1">
-                    <h2 class="text-center">Credit &amp; Debit Cards Information</h2>
+                    <h2 class="text-center"><span style="color: white;">Credit &amp; Debit Cards Information</span></h2>
                 </div>
             </div>
             <div class="row">
@@ -105,7 +130,7 @@ html lang="en">
                     <div class="row mb-4">
                         <div class="col-lg-1 col-md-1"></div>
                         <div class="col-lg-3 col-md-3 col-12 text-left">
-                            <span class="text-muted recorddetaillabel mr-1">Card Number *</span>
+                            <span class="text-muted recorddetaillabel mr-1"><span style="color: white;">Card Number *</span></span>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-lg-right text-md-right text-right text-sm-left">
                             <div class="row">
@@ -128,7 +153,7 @@ html lang="en">
                     <div class="row mb-4">
                         <div class="col-lg-1 col-md-1"></div>
                         <div class="col-lg-3 col-md-3 col-12 text-left">
-                            <span class="text-muted recorddetaillabel mr-1">Exp. Date *</span>
+                            <span class="text-muted recorddetaillabel mr-1"><span style="color: white;">Exp. Date *</span></span>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-lg-right text-md-right text-right text-sm-left">
                             <div class="row">
@@ -148,7 +173,7 @@ html lang="en">
                     <div class="row mb-4">
                         <div class="col-lg-1 col-md-1"></div>
                         <div class="col-lg-3 col-md-3 col-12 text-left">
-                            <span class="text-muted recorddetaillabel mr-1">Security Code *</span>
+                            <span class="text-muted recorddetaillabel mr-1"><span style="color: white;">Security Code *</span></span>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-lg-right text-md-right text-right text-sm-left">
                             <div class="row">
@@ -172,9 +197,12 @@ html lang="en">
                 <button class="btn btn-outline-primary btn-lg col-xs-6 col-xs-offset-3" type="button" id="submit-button"><a href ="Delivery.html">Next</a></button>
             </div>
             <div class="col-12 col-lg-6 float-lg-left pl-0 pr-0 text-center text-lg-right">
-                <input type="button" name="btnBack" value="Back" id="btnBack" class="btn btn-lg btn-outline-primary mb-3">
+                <a href="checkout.html"><input type="button" name="btnBack" value="Back" id="btnBack" class="btn btn-lg btn-outline-primary mb-3"></a>
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
 </body>
 </main>
