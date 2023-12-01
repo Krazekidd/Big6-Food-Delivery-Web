@@ -29,8 +29,12 @@
 
    
     <link rel="stylesheet" href="dstyle.css">
+    <script src="delivery.js"></script>
+   
 
     <!--Code for Map-->
+    
+
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -72,7 +76,12 @@
         </div>
     </div>
 
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div  id="map-canvas"></div>
+
     <script>
+
+
         // Initialize Bootstrap Timepicker
         $('.clockpicker').timepicker({
             autoclose: true,
