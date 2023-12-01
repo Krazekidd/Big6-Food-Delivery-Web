@@ -79,8 +79,14 @@ try {
             inserter()
 
 
-            window.location.href = 'payment.html';
-    });
+            inserter()
+            .then((result) => {
+                // Handle the result
+            })
+            .catch((error) => {
+    });           
+             window.location.href = 'payment.html';
+})
 
 
  

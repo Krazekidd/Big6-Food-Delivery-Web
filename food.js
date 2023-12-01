@@ -59,13 +59,19 @@ function ready(){
 
 function buybuttonClicked(){
     alert("Your Order has been Placed")
-    storeCartItemsToCSV();
+    storeCartItemsToCSV()
+    window.location.href = "checkout.html"
+
     var cartContent = document.getElementsByClassName("cart-content")[0];
-    window.location.href = "checkout.html";
+
+
+    
     while (cartContent.hasChildNodes()){
         cartContent.removeChild(cartContent.firstChild);
     }
+    
     updatetotal();
+    
 }
 
 
@@ -152,22 +158,57 @@ function storeCartItemsToCSV() {
         let userid = data["session"]["user"]["id"];
 
         try {
-            const { data, error } = await supabase
-              .from('current_orders')
-              .insert([
-                //{ , cost: items.price, , user_id: userid},
-                {user_id: userid, cost: items.price, item: items.title,}
-              ])
-              .select()
-          
-            } catch (error) {
+            let { data: customer, error } = await supabase
+            .from('customer')
+            .select('first_name')
+
+            console.log(customer)
+            try {
+                const { data, error } = await supabase
+                  .from('current_orders')
+                  .insert([
+    
+                    //{ , cost: items.price, , user_id: userid},
+                    {user_id: userid, cost: items.price, item: items.title, name: customer[0]['first_name']}
+                  ])
+                  .select()
               
+                } catch (error) {
+                  
+            }
+        } catch (error) {
+            
         }
+
+
+
+
+        
+
+
+   
     }
  
     console.log(cartItemsList);
 
-    const csvContent =  cartItemsList.map(item => `${item.title},${item.price},${amount},${item.quantity},${inserter(item)}`).join("\n");
+    const csvContent =  cartItemsList.map(item => `${item.title},${item.price},${amount},${item.quantity},${inserter(item)
+        .then((result) => {
+            // Handle the result
+        })
+        .catch((error) => {
+            // Handle errors
+        })}`).join("\n");
+
+
+
+        let i = 0;
+                
+        while(i >5){
+
+            i++;
+        }
+
+
 
 
         
