@@ -16,4 +16,14 @@
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 2000); // Change slide every 2 seconds
     }
+    function buybuttonClicked(){
+      alert("Your Order has been Placed")
+      storeCartItemsToCSV();
+      var cartContent = document.getElementsByClassName("gift-card")[0];
+      window.location.href = "checkout.html";
+      while (gift-card.hasChildNodes()){
+          cartContent.removeChild(gift-card.firstChild);
+      }
+      updatetotal();
+  }
   

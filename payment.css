@@ -5,6 +5,26 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   color:white;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  background: grey;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  color: black;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 50px;
+}
+
 .btn-outline-warning {
   background-color: #6c757d;
   color: white;
